@@ -1,7 +1,6 @@
-import { AuthLayoutProps } from "@/types/auth";
 import { ReactNode } from "react";
 
-const AuthLayout = ({ children }: AuthLayoutProps) => {
+const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="min-h-screen bg-background">
       {/* Background with floating elements - similar to landing page */}

@@ -1,15 +1,3 @@
-import { ReactNode } from "react";
-import { InputHTMLAttributes, forwardRef } from "react";
-
-export interface AuthLayoutProps {
-  children: ReactNode;
-}
-
-export interface FormInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  error?: string;
-  icon?: React.ReactNode;
-}
 export interface SignupFormData {
   firstName: string;
   lastName: string;
@@ -20,6 +8,12 @@ export interface SignupFormData {
   educationLevel: string;
 }
 
+export interface LoginFormData {
+  email: string;
+  password: string;
+  rememberMe: boolean;
+}
+
 export interface FormErrors {
   firstName?: string;
   lastName?: string;
@@ -28,5 +22,6 @@ export interface FormErrors {
   confirmPassword?: string;
   age?: string;
   educationLevel?: string;
+  rememberMe?: string;
   general?: string;
 }
