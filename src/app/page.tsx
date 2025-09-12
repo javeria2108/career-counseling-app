@@ -1,4 +1,8 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 const LandingPage = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-background text-heading">
       {/* Navigation */}
@@ -31,7 +35,10 @@ const LandingPage = () => {
                 About
               </a>
             </div>
-            <button className="bg-btn-bg hover:bg-btn-hover text-btn-text px-6 py-2 rounded-lg font-medium border border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <button
+              className="bg-btn-bg hover:bg-btn-hover text-btn-text px-6 py-2 rounded-lg font-medium border border-border transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              onClick={() => router.push("login")}
+            >
               Sign In
             </button>
           </div>
